@@ -19,8 +19,15 @@ class App extends Component {
     return (
       <Fragment>
         <Title />
-        <SearchBox addItem={this.addItem} />
-        <TodoList items={this.state.items} />
+        <main
+          style={{
+            display: 'grid',
+            gridGap: '50px'
+          }}
+        >
+          <SearchBox addItem={this.addItem} />
+          <TodoList items={this.state.items} />
+        </main>
       </Fragment>
     );
   }
