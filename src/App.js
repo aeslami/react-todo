@@ -19,7 +19,8 @@ class App extends Component {
     return (
       <Fragment>
         <Title />
-        <SearchBox />
+        <SearchBox addItem={this.addItem} />
+        <TodoList items={this.state.items} />
       </Fragment>
     );
   }
