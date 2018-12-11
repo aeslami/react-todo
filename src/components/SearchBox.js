@@ -10,8 +10,16 @@ class SearchBox extends Component {
   }
 
   handleInputChange(e) {
+  handleInputChange = e => {
     this.setState({ text: e.target.value });
   }
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.addItem(this.state.text);
+    this.setState({ text: '' });
+  };
 
   render() {
     return (
