@@ -12,9 +12,12 @@ class SearchBox extends Component {
   };
 
   handleSubmit = e => {
+    const text = this.state.text.trim();
     e.preventDefault();
-    this.props.addItem(this.state.text);
-    this.setState({ text: '' });
+    if (text) {
+      this.props.addItem(text);
+      this.setState({ text: '' });
+    }
   };
 
   render() {
