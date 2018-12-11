@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './main.css';
+import Title from './components/Title';
 
 class App extends Component {
   render() {
-    return <div>Todo</div>;
+    return (
+      <Fragment>
+        <Title />
+      </Fragment>
+    );
   }
 }
 
