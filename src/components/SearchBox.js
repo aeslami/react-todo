@@ -22,16 +22,31 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.text}
-            onChange={this.handleInputChange}
-          />
-          <Plus onClick={this.handleSubmit} />
-        </form>
-      </div>
+      <form
+        onSubmit={this.handleSubmit}
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'auto 50px',
+          padding: '1em',
+          borderRadius: '50px',
+          border: '4px solid black'
+        }}
+      >
+        <input
+          type="text"
+          value={this.state.text}
+          onChange={this.handleInputChange}
+          style={{
+            height: '40px',
+            fontSize: '25px',
+            borderRadius: '50px'
+          }}
+        />
+        <Plus
+          onClick={this.handleSubmit}
+          style={{ height: '40px', width: '40px', marginLeft: '1em' }}
+        />
+      </form>
     );
   }
 }
