@@ -8,11 +8,23 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { items: [] };
+    this.state = {
+      items: [],
+      count: 0
+    };
   }
 
   addItem = item => {
-    this.setState({ items: [...this.state.items, { text: item }] });
+    this.setState({
+      items: [...this.state.items, { text: item, id: this.state.count + 1 }],
+      count: this.state.count + 1
+    });
+  };
+
+  removeItem = id => {
+    this.setState({
+      items: this.state.items.filter(item => item.id !== id)
+    });
   };
 
   render() {
@@ -26,7 +38,7 @@ class App extends Component {
           }}
         >
           <SearchBox addItem={this.addItem} />
-          <TodoList items={this.state.items} />
+          <TodoList items={this.state.items} removeItem={this.removeItem} />
         </main>
       </Fragment>
     );
