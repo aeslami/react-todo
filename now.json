@@ -1,6 +1,12 @@
 {
   "version": 2,
   "name": "todo",
+  "alias": "todo.nerdsnotebook.com",
+  "regions": "all",
+  "github": {
+    "enabled": true,
+    "autoAlias": true
+  },
   "builds": [{ "src": "package.json", "use": "@now/static-build" }],
   "routes": [
     { "src": "^/static/(.*)", "dest": "/static/$1" },
