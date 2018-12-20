@@ -29,7 +29,8 @@ class SearchBox extends Component {
           gridTemplateColumns: 'calc(100% - 55px) 50px',
           padding: '1em',
           borderRadius: '50px',
-          border: '4px solid black'
+          border: '4px solid black',
+          marginBottom: '2em'
         }}
       >
         <input
