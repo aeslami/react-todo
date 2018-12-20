@@ -26,7 +26,7 @@ class SearchBox extends Component {
         onSubmit={this.handleSubmit}
         style={{
           display: 'grid',
-          gridTemplateColumns: 'auto 50px',
+          gridTemplateColumns: 'calc(100% - 55px) 50px',
           padding: '1em',
           borderRadius: '50px',
           border: '4px solid black'

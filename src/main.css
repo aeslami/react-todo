@@ -120,3 +120,10 @@ body {
   width: 80%;
   margin: 5em auto;
 }
+
+@media only screen and (max-device-width: 667px) {
+  #root {
+    margin: 1em auto;
+    width: 95%;
+  }
+}

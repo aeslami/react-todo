@@ -31,12 +31,7 @@ class App extends Component {
     return (
       <Fragment>
         <Title />
-        <main
-          style={{
-            display: 'grid',
-            gridGap: '50px'
-          }}
-        >
+        <main>
           <SearchBox addItem={this.addItem} />
           <TodoList items={this.state.items} removeItem={this.removeItem} />
         </main>
