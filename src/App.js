@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './main.css';
 import Title from './components/Title';
 import SearchBox from './components/SearchBox';
-import TodoList from './components/TodoList';
+import TodoList from './components/TodoList/TodoList';
 
 class App extends Component {
   constructor(props) {
